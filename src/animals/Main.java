@@ -83,5 +83,8 @@ public class Main
     System.out.println("\n Filtered by 1758");
     yearList.forEach((v) -> System.out.println(v));
     
+    List<Animal> mammalList = filterAnimals(animalList, v -> v instanceof Mammals);
+     System.out.println("\n Stretch");
+    mammalList.forEach((v) -> System.out.println(v));
   }
 }
