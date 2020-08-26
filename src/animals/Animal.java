@@ -2,14 +2,18 @@ package animals;
 
 abstract class Animal
 { 
-  protected int maxId = 0;
-  public int food;
-  public int id; 
-  public Animal()
+  private static int maxId = 0;
+  private int food;
+  private int id; 
+  private int yearNamed;
+  private String name;
+  public Animal(String name, int yearNamed)
   {
     maxId++;
-    id = maxId;
-    food = 1;
+    this.id = maxId;
+    this.name = name;
+    this.yearNamed = yearNamed;
+    this.food = 1;
     
   }
   abstract String move();
@@ -19,4 +23,22 @@ abstract class Animal
   {
     food++;
   }
+  public String getName()
+  {
+    return name;
+  }
+  public int getYear()
+  {
+    return yearNamed;
+  }
+  public int getId()
+  {
+    return id;
+  }
+  @Override
+  public String toString()
+  {
+    return "id=" + id + ", name = " + name + ", yearNamed = " + yearNamed;
+  } 
+
 }

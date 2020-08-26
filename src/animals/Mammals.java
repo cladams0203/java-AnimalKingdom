@@ -2,13 +2,14 @@ package animals;
 
 public class Mammals extends Animal
 {
-  private String name;
-  private int yearNamed;
+  // private String name;
+  // private int yearNamed;
   
   public Mammals(String name, int yearNamed)
   {
-    this.name = name;
-    this.yearNamed = yearNamed;
+    super(name, yearNamed);
+    // this.name = name;
+    // this.yearNamed = yearNamed;
   }
   @Override
   public String move()
@@ -25,9 +26,9 @@ public class Mammals extends Animal
   {
     return "Live Births";
   }
-  @Override
-  public String toString()
-  {
-    return "id=" + id + ", name = " + name + ", yearNamed = " + yearNamed;
-  }
+  // @Override
+  // public String toString()
+  // {
+  //   return "id=" + id + ", name = " + name + ", yearNamed = " + yearNamed;
+  // }
 }
